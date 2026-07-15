@@ -1,0 +1,29 @@
+{
+  "name": "w2-ai-build-your-first-crud-api",
+  "version": "1.0.0",
+  "description": "Build a small API that manages a to-do list: you can create tasks, read them, update them, and delete them — the four CRUD operations. You will see and test your API in a visual page called Swagger UI, and publish everything to GitHub.",
+  "keywords": [
+    "CRUD",
+    "API",
+    "W2"
+  ],
+  "homepage": "https://github.com/Ali2006-NED/W2-A1#readme",
+  "bugs": {
+    "url": "https://github.com/Ali2006-NED/W2-A1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ali2006-NED/W2-A1.git"
+  },
+  "license": "ISC",
+  "author": "Ali2006-NED",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4"
+  }
+}
