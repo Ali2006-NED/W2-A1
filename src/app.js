@@ -13,12 +13,24 @@ app.get('/hello', (req, res) => {
 app.get('/tasks', (req, res) => {
   res.send({ "tasks": tasks });
 });
+
 app.get('/tasks/:id',(req,res) => {
   const id = req.params.id;
   if (tasks.some(tasks => tasks.id == id)){
     res.send({"task":tasks[id-1]});
   } else {
     res.status(404).send({"error":`Task ${id} not found`});
+  }
+});
+
+app.post('/tasks', (req,res) => {
+  const title = req.body.title;
+  if (title){
+    const newTask = {"id": tasks.length + 1, "title": title, "done": false};
+    tasks.push(newTask);
+    res.status(201).send({"task": newTask});
+  } else {
+    res.status(400).send({"error": "Title is required"});
   }
 });
 
