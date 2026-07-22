@@ -34,6 +34,32 @@ app.post('/tasks', (req,res) => {
   }
 });
 
+app.put('/tasks/:id', (req,res) => {
+  const id = req.params.id;
+  const task = tasks.find(task => task.id == id);
+  if (task){
+    const title = req.body.title;
+    const done = req.body.done;
+    if (title !== undefined) task.title = title;
+    if (done !== undefined) task.done = done;
+    res.send({"task": task});
+  } else {
+    res.status(404).send({"error":`Task ${id} not found`});
+  }
+});
+
+app.delete('/tasks/:id', (req,res) => {
+  const id = req.params.id;
+  const index = tasks.findIndex(task => task.id == id);
+  if (index !== -1){
+    tasks.splice(index, 1);
+    res.send({"message":`Task ${id} deleted`});
+  } else {
+    res.status(404).send({"error":`Task ${id} not found`});
+  }
+});
+
+
 app.get('/health', (req, res) => {
   res.send({ "status": "ok" });
 });
