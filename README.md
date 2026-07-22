@@ -76,6 +76,9 @@ Content-Length: 31
 
 {"error":"Task 99 not found"}
 
+## Swagger UI Screenshot
+![Swagger UI Docs](src/assets/screenshot/ui1.png)
+![Endpoints](src/assets/screenshot/ui2.png)
 
 ## 🔬 Mortality Experiment Observation
 What happens when you create tasks, restart the server, and run GET /tasks?
