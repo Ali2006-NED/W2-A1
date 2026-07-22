@@ -12,6 +12,27 @@
     }
   ],
   "paths": {
+    "/": {
+      "get": {
+        "summary": "Hello Server",
+        "description": "Simple smoke-test endpoint.",
+        "responses": {
+          "200": {
+            "description": "Returns a simple hello message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string", "example": "Hello, World!" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/health": {
       "get": {
         "summary": "Health Check",
