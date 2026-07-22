@@ -15,7 +15,7 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/Ali2006-NED/W2-A1.git
-cd YOUR_REPO_NAME
+cd W2-AI
 npm install
 ```
 ### 2. Start the Server
@@ -29,7 +29,7 @@ npm start
 
 | Method | Endpoint | Description | Status Codes |
 |:---:|---|---|---|
-| ![GET](https://img.shields.io/badge/GET-61AFFE?style=flat-square&logoColor=white) | `/` | API Metadata | `200` |
+| ![GET](https://img.shields.io/badge/GET-61AFFE?style=flat-square&logoColor=white) | `/` | Smoke Test Endpoint | `200` |
 | ![GET](https://img.shields.io/badge/GET-61AFFE?style=flat-square&logoColor=white) | `/health` | Server Health Check | `200` |
 | ![GET](https://img.shields.io/badge/GET-61AFFE?style=flat-square&logoColor=white) | `/tasks` | List all tasks | `200` |
 | ![GET](https://img.shields.io/badge/GET-61AFFE?style=flat-square&logoColor=white) | `/tasks/:id` | Get task by ID | `200` `404` |
@@ -60,7 +60,9 @@ X-Powered-By: Express
 Content-Type: application/json; charset=utf-8
 Content-Length: 39
 
+```json
 {"id":4,"title":"Buy milk","done":false}
+```
 
 ### 2. Handling Missing Resources (GET /tasks/99)
 Bash
