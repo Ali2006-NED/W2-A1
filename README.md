@@ -76,7 +76,9 @@ X-Powered-By: Express
 Content-Type: application/json; charset=utf-8
 Content-Length: 31
 
+```json
 {"error":"Task 99 not found"}
+```
 
 ## Swagger UI Screenshot
 ![Swagger UI Docs](src/assets/screenshot/ui1.png)
