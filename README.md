@@ -14,8 +14,8 @@ A clean, modular, in-memory RESTful Task Management API built with Node.js and E
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/Ali2006-NED/W2-A1.git
-cd W2-AI
+git clone https://github.com/Ali2006-NED/FlyRank-Internship-Tasks.git
+cd FlyRank-Internship-Tasks
 npm install
 ```
 ### 2. Start the Server
